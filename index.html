@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="veOdiG52M8hKgYAIeAy5Su-ETdktGCTYbQvlutYqUs0" />
     <title>Kotak Saran</title>
     <link rel="stylesheet" href="style.css">
     <meta property="og:title" content="Kotak Saran OSIS SMPN 1 Cilimus" />
@@ -10,6 +11,21 @@
   content="Kirim saran untuk Pengurus OSIS SMP Negeri 1 Cilimus" />
     <meta property="og:url" content="https://kotaksaran.pages.dev" />
 </head>
+    <div class="color-switch">
+        <div class="switch-btn">
+            <ion-icon name="settings-sharp"></ion-icon>
+        </div>
+
+        <h3>Colors</h3>
+
+        <div class="theme-buttons-containner">
+            <span class="theme-buttons" color-base="#D6E6F2" color-accent="#B9D7EA" style="background: #D6E6F2"></span>
+            <span class="theme-buttons" color-base="#f2d6d6" color-accent="#eab9b9" style="background: #f2d6d6"></span>
+            <span class="theme-buttons" color-base="#f2e3d6" color-accent="#ead3b9" style="background: #f2e3d6"></span>
+            <span class="theme-buttons" color-base="#d6f2da" color-accent="#b9eab9" style="background: #d6f2da"></span>
+            <span class="theme-buttons" color-base="#ead6f2" color-accent="#e0b9ea" style="background: #ead6f2"></span>
+        </div>
+    </div>     
 <body>
 
     <nav>
@@ -21,7 +37,8 @@
 
     <div class="wrapper">
         <div class="sugestbox">
-            <form action="https://formsubmit.co/e1072baaa3af63bb27fd8e3d2afad5ac" method="POST">
+
+            <form action="https://formsubmit.co/36580d7c554e121bbd51304a625a94df" method="POST">
                 <h3>Kirim saran kepada pengurus OSIS SMPN 1 Cilimus</h3>
                 <h3>Pengirim pesan tidak kami ketahui</h3>
                 <textarea name="Message" placeholder="Pesan" required></textarea>
@@ -29,5 +46,26 @@
             </form>
         </div>
     </div>
+
+    <div id="copyright">
+        <b>Web ini dikelola oleh OSIS SMP Negeri 1 Cilimus</b><br> <p style="font-size: 10px; text-align: center;">Dan dibuat oleh <a href="https://instagram.com/Haikaru_27">Muhammad Haikal Apriliano</p></a>
+    </div>
+    <script>
+        document.querySelector('.switch-btn').onclick = () =>{
+            document.querySelector('.color-switch').classList.toggle('active');
+        };
+    
+        let themeButtons = document.querySelectorAll('.theme-buttons');
+        themeButtons.forEach(color =>{
+            color.addEventListener('click', () =>{
+                let colorBase = color.getAttribute('color-base');
+                document.querySelector(':root').style.setProperty('--color1', colorBase);
+                let colorAccent = color.getAttribute('color-accent');
+                document.querySelector(':root').style.setProperty('--color2', colorAccent);
+            });
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
