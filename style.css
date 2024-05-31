@@ -7,6 +7,7 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    transition: all 0.5s linear;
 }
 
 html{
@@ -52,6 +53,7 @@ nav{
 
 .sugestbox{
     padding-top: 10px;
+    padding-bottom: 70px;
     text-align: center;
 }
 
@@ -95,6 +97,87 @@ nav{
     background: #ffffff;
     color: #000000;
     padding: 15px 20px 15px 20px;
+}
+
+.color-switch{
+    position: fixed;
+    top: 25px; 
+    right: -225px;
+    width: 200px;
+    padding: 10px;
+    background: #fff;
+    z-index: 1000;
+}
+
+.color-switch.active{
+    right: 0px;
+}
+
+.color-switch a ion-icon{
+    width: 180px;
+    color: var(--color2);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    text-align: center;
+}
+
+.color-switch h3{
+    color: var(--color2);
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    text-align: center;
+}
+
+.color-switch .switch-btn{
+    position: absolute;
+    top: 0;
+    left: -75px;
+    background: var(--color1);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.color-switch .switch-btn ion-icon{
+    animation:rotate 2s linear infinite;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.color-switch .theme-buttons-containner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.color-switch .theme-buttons-containner .theme-buttons{
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#copyright{
+    background: var(--color2);
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+#copyright p{
+    font-size: 10px;
+    text-align: left;
 }
 
 @media screen and (max-width:991.98px) {
